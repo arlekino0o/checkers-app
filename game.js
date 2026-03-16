@@ -44,12 +44,6 @@ function initEmptyBoard() {
 
 // ─── Загрузка состояния с бэкенда ────────────────────────
 async function loadState() {
-  if (!chatId) {
-    setStatus('Ошибка: chatId не передан');
-    console.error('chatId отсутствует в URL');
-    return;
-  }
-
   if (!chatId && tg.initDataUnsafe?.user?.id) {
     chatId = tg.initDataUnsafe.user.id;
     console.log('chatId взят из initDataUnsafe:', chatId);
