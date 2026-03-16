@@ -2,14 +2,15 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Шашки</title>
+    <!-- Telegram WebApp SDK — всегда первым в head -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="status">Ваш ход ♟</div>
+<div id="status">Загрузка...</div>
 <canvas id="board"></canvas>
-<script src="game.js"></script>
+<script src="game.js?v=2"></script>
 </body>
 </html>
+
