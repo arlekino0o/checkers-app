@@ -1,0 +1,25 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--tg-theme-bg-color, #1c1c1e);
+  font-family: -apple-system, sans-serif;
+  user-select: none;
+}
+
+#status {
+  color: var(--tg-theme-text-color, #ffffff);
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px;
+  min-height: 44px;
+}
+
+canvas {
+  border-radius: 8px;
+  touch-action: none; /* отключаем скролл при тапе на доску */
+}
