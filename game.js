@@ -62,8 +62,8 @@ async function loadState() {
     const state = await res.json();
     applyState(state);
   } catch (e) {
-    console.error('Не удалось загрузить состояние:', e);
-    setStatus('Ошибка загрузки игры');
+    console.error('Не удалось загрузить состояние:', e.message);
+    setStatus('Ошибка загрузки игры: ' + e.message);
   }
 }
 
