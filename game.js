@@ -49,6 +49,19 @@ async function loadState() {
     console.error('chatId отсутствует в URL');
     return;
   }
+
+  if (!chatId && tg.initDataUnsafe?.user?.id) {
+    chatId = tg.initDataUnsafe.user.id;
+    console.log('chatId взят из initDataUnsafe:', chatId);
+  }
+
+  if (!chatId) {
+      setStatus('Ошибка: chatId не определён');
+      console.error('Нет chatId ни в URL, ни в initDataUnsafe');
+  } else {
+      loadState();
+  }
+
   try {
     const res = await fetch(`/api/game/${chatId}`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
