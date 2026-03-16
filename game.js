@@ -126,6 +126,7 @@ function drawPiece(r, c) {
 
 // ─── Обработка кликов/тапов ──────────────────────────────
 canvas.addEventListener('pointerdown', e => {
+  console.log('pointerdown');
   if (gameStatus !== 'IN_PROGRESS') return;
 
   const rect = canvas.getBoundingClientRect();
